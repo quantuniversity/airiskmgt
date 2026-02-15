@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=IBM+Plex+Mono:wght@400;500;600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;600;700&family=IBM+Plex+Mono:wght@600&display=swap');
 
 /* ===== RESET & BASE ===== */
 * {
@@ -431,7 +431,7 @@ section {
 }
 
 .cases-section {
-  margin-bottom: 60px;
+  margin-bottom: 80px;
 }
 
 .cases-section:last-child {
@@ -444,14 +444,57 @@ section {
   text-transform: uppercase;
   letter-spacing: 2px;
   color: var(--accent);
-  margin-bottom: 32px;
+  margin-bottom: 40px;
   padding-bottom: 12px;
   border-bottom: 2px solid var(--gray-800);
 }
 
-.cases-list {
+/* Chapter Case Groups */
+.chapter-case-group {
+  margin-bottom: 48px;
+  background: rgba(255, 255, 255, 0.02);
+  padding: 32px;
+  border-left: 4px solid var(--accent);
+}
+
+.chapter-case-header {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  margin-bottom: 12px;
+}
+
+.chapter-number {
+  font-family: 'IBM Plex Mono', monospace;
+  font-size: 12px;
+  font-weight: 700;
+  color: var(--accent);
+  background: rgba(0, 102, 255, 0.15);
+  padding: 6px 12px;
+  border-radius: 4px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.chapter-case-title {
+  font-size: 20px;
+  font-weight: 700;
+  color: var(--white);
+  line-height: 1.3;
+}
+
+.chapter-question {
+  font-size: 15px;
+  font-style: italic;
+  color: var(--gray-400);
+  margin-bottom: 24px;
+  padding-left: 4px;
+}
+
+/* Cases Grid */
+.cases-grid {
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
+  grid-template-columns: repeat(3, 1fr);
   gap: 20px;
 }
 
@@ -493,6 +536,31 @@ section {
   font-size: 13px;
   line-height: 1.6;
   color: var(--gray-400);
+}
+
+/* Grand Finale Box */
+.grand-finale-box {
+  margin-top: 60px;
+  padding: 40px;
+  background: var(--accent);
+  border-radius: 8px;
+  text-align: center;
+}
+
+.grand-finale-title {
+  color: var(--white);
+  font-size: 32px;
+  font-weight: 700;
+  margin-bottom: 16px;
+  letter-spacing: -1px;
+}
+
+.grand-finale-text {
+  color: rgba(255,255,255,0.95);
+  font-size: 18px;
+  line-height: 1.7;
+  max-width: 800px;
+  margin: 0 auto;
 }
 
 /* ===== AUTHOR SECTION ===== */
@@ -829,8 +897,8 @@ section {
     grid-template-columns: 1fr;
   }
   
-  .cases-list {
-    grid-template-columns: 1fr;
+  .cases-grid {
+    grid-template-columns: repeat(2, 1fr);
   }
   
   .author-bio-grid {
@@ -868,6 +936,14 @@ section {
   }
   
   .chapter-section {
+    padding: 24px;
+  }
+  
+  .cases-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .chapter-case-group {
     padding: 24px;
   }
   
